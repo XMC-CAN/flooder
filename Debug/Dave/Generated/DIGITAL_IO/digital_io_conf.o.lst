@@ -1,0 +1,78 @@
+   1              	 .syntax unified
+   2              	 .cpu cortex-m4
+   3              	 .eabi_attribute 27,3
+   4              	 .fpu fpv4-sp-d16
+   5              	 .eabi_attribute 20,1
+   6              	 .eabi_attribute 21,1
+   7              	 .eabi_attribute 23,3
+   8              	 .eabi_attribute 24,1
+   9              	 .eabi_attribute 25,1
+  10              	 .eabi_attribute 26,1
+  11              	 .eabi_attribute 30,6
+  12              	 .eabi_attribute 34,1
+  13              	 .eabi_attribute 18,4
+  14              	 .thumb
+  15              	 .file "digital_io_conf.c"
+  16              	 .text
+  17              	.Ltext0:
+  18              	 .cfi_sections .debug_frame
+  19              	 .global LED2_config
+  20              	 .section .data.LED2_config,"aw",%progbits
+  21              	 .align 2
+  24              	LED2_config:
+  25 0000 80       	 .byte -128
+  26 0001 000000   	 .space 3
+  27 0004 00000100 	 .word 65536
+  28 0008 00000000 	 .space 4
+  29              	 .global LED2
+  30              	 .section .rodata.LED2,"a",%progbits
+  31              	 .align 2
+  34              	LED2:
+  35 0000 00850248 	 .word 1208124672
+  36 0004 80       	 .byte -128
+  37 0005 000000   	 .space 3
+  38 0008 00000100 	 .word 65536
+  39 000c 00000000 	 .space 4
+  40 0010 08       	 .byte 8
+  41 0011 00       	 .byte 0
+  42 0012 0000     	 .space 2
+  43              	 .global Button1_config
+  44              	 .section .bss.Button1_config,"aw",%nobits
+  45              	 .align 2
+  48              	Button1_config:
+  49 0000 00000000 	 .space 12
+  49      00000000 
+  49      00000000 
+  50              	 .global Button1
+  51              	 .section .rodata.Button1,"a",%progbits
+  52              	 .align 2
+  55              	Button1:
+  56 0000 008F0248 	 .word 1208127232
+  57 0004 00       	 .byte 0
+  58 0005 00000000 	 .space 11
+  58      00000000 
+  58      000000
+  59 0010 0D       	 .byte 13
+  60 0011 00       	 .byte 0
+  61 0012 0000     	 .space 2
+  62              	 .text
+  63              	.Letext0:
+  64              	 .file 1 "e:\\davev4\\dave-4.1.4\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+  65              	 .file 2 "e:\\davev4\\dave-4.1.4\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+  66              	 .file 3 "D:\\dholler\\Dokumente\\uni\\bus\\xmc\\flooder\\Libraries\\XMCLib\\inc/xmc_gpio.h"
+  67              	 .file 4 "D:\\dholler\\Dokumente\\uni\\bus\\xmc\\flooder\\Libraries\\XMCLib\\inc/xmc4_gpio.h"
+  68              	 .file 5 "../Dave/Generated/DIGITAL_IO/digital_io.h"
+  69              	 .file 6 "D:\\dholler\\Dokumente\\uni\\bus\\xmc\\flooder/Libraries/CMSIS/Include/core_cm4.h"
+  70              	 .file 7 "../Dave/Generated/DIGITAL_IO/digital_io_conf.c"
+DEFINED SYMBOLS
+                            *ABS*:00000000 digital_io_conf.c
+    {standard input}:24     .data.LED2_config:00000000 LED2_config
+    {standard input}:21     .data.LED2_config:00000000 $d
+    {standard input}:34     .rodata.LED2:00000000 LED2
+    {standard input}:31     .rodata.LED2:00000000 $d
+    {standard input}:48     .bss.Button1_config:00000000 Button1_config
+    {standard input}:45     .bss.Button1_config:00000000 $d
+    {standard input}:55     .rodata.Button1:00000000 Button1
+    {standard input}:52     .rodata.Button1:00000000 $d
+
+NO UNDEFINED SYMBOLS
